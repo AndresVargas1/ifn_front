@@ -13,6 +13,7 @@ export function LoginForm() {
   const [identificacion, setIdentificacion] = useState('');
   const [clave, setClave] = useState('');
   const [error, setError] = useState('');
+  const [access, setAccess] = useState('');
   const [loading, setLoading] = useState(false);
 
   const { login } = useAuth();
@@ -36,6 +37,8 @@ export function LoginForm() {
         'Credenciales inválidas. Verifica tu usuario y contraseña.';
       setError(message);
       return;
+    }else{
+      setAccess('Credenciales validas');
     }
 
     // When successful, data should contain jwt and maybe other fields.
@@ -84,6 +87,11 @@ export function LoginForm() {
           {error && (
             <div className="text-danger small mb-3" role="alert">
               {error}
+            </div>
+          )}
+          {access && (
+            <div className="text-success small mb-3" role="success">
+              {access}
             </div>
           )}
           <button
