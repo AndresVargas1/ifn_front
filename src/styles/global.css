@@ -1,0 +1,12 @@
+:root {
+  --ifn-green: #2e7d32;
+  --ifn-green-600: #1b5e20;
+  --ifn-green-100: #e8f5e9;
+  --ifn-gray: #f3f4f6;
+}
+
+body {
+  background-color: var(--ifn-gray);
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
