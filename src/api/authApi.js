@@ -29,3 +29,13 @@ export function sessionStatusRequest(payload) {
 export function logoutRequest(payload) {
   return httpPost('/auth/logout/', payload);
 }
+
+/**
+ * Create a new user in the authentication service.
+ *
+ * @param {{ nombre: string, apellido: string, identificacion: string, clave: string }} payload
+ * @returns {Promise<{ok: boolean, status: number, data: any}>}
+ */
+export function registerRequest(payload) {
+  return httpPost('/auth/register/', payload);
+}

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthLayout } from '../layouts/AuthLayout';
 import { LoginPage } from '../auth/pages/LoginPage';
+import { RegisterPage } from '../auth/pages/RegisterPage';
 
 /**
  * Defines the main routes of the application.
@@ -18,6 +19,14 @@ export function AppRouter() {
           element={
             <AuthLayout>
               <LoginPage />
+            </AuthLayout>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <AuthLayout>
+              <RegisterPage />
             </AuthLayout>
           }
         />

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { loginRequest } from '../../api/authApi';
 import { useAuth } from '../context/AuthContext';
+import { Link } from 'react-router-dom';
 
 /**
  * Login form component.
@@ -102,6 +103,9 @@ export function LoginForm() {
             {loading ? 'Entrando…' : 'Entrar'}
           </button>
         </form>
+        <div className="mt-3 text-center">
+          ¿No tienes una cuenta? <Link to="/register">Regístrate</Link>
+        </div>
       </div>
     </div>
   );
