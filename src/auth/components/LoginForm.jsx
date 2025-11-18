@@ -63,7 +63,7 @@ export function LoginForm() {
               id="login-identificacion"
               type="text"
               className="form-control"
-              placeholder="jefe1 o tecnico1"
+              placeholder="Usuario"
               value={identificacion}
               onChange={(e) => setIdentificacion(e.target.value)}
               autoComplete="username"
